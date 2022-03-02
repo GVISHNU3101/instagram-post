@@ -2,8 +2,9 @@ import instaloader
 import cv2
 import glob
 from datetime import datetime
-from insta_p import password
 
+
+#CODE for showing insta posts that are downloaded
 def show(username):
     files = glob.glob('C:\\Users\\Admin\\'+username+'\\*.jpg')+glob.glob('C:\\Users\\Admin\\'+username+'\\*.mp4')
     for file in files:
@@ -39,7 +40,8 @@ def show(username):
 ig = instaloader.Instaloader()
 
 i, k = 0, 0
-#ig.login('vishnu_gosala',password)
+#To login with your credentials uncomment the below line.
+#ig.login('YOUR USERNAME','PASSWORD')
 
 username=str(input("Enter the Username:"))
 profile= instaloader.Profile.from_username(ig.context,username)
